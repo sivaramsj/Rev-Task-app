@@ -69,7 +69,7 @@ const ClientForm = ({ isUpdate = false }) => {
     };
 
     return (
-        <div className="container mt-5 update-component">
+        <div className="container-fluid mt-5 update-component">
             {isUpdate && (
                 <div className="search-section">
                     <input
@@ -88,7 +88,7 @@ const ClientForm = ({ isUpdate = false }) => {
             )}
             
             <form onSubmit={handleSubmit} className="form">
-                <h2>{isUpdate ? 'Update Client' : 'Create Client'}</h2>
+                <h2 className='form-header-title'>{isUpdate ? 'Update Client' : 'Create Client'}</h2>
                 <div className="mb-3">
                     <label htmlFor="companyName" className="form-label">Company Name</label>
                     <input

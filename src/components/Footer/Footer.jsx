@@ -10,12 +10,12 @@ const socialLinks = [
   { href: '', icon: 'github' },
 ];
 
-const products = ['Angular', 'React', 'Vue', 'Laravel'];
+const products = ['Development', 'Training', 'Deploying', 'AI'];
 const usefulLinks = ['Pricing', 'Settings', 'Orders', 'Help'];
 
 const contactInfo = [
   { icon: 'home', text: 'Chennai' },
-  { icon: 'envelope', text: 'revTask@example.com' },
+  { icon: 'envelope', text: 'rev@gmail.com' },
   { icon: 'phone', text: '+ 9729303230' }
 ];
 
@@ -43,10 +43,10 @@ function Footer() {
                 <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
                   <h6 className='text-uppercase fw-bold mb-4'>
                     <MDBIcon color='secondary' icon='gem' className='me-3' />
-                    Company name
+                    Revature
                   </h6>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.tempore voluptate eos quo nam repudiandae totam id nisi sapiente numquam incidunt quaerat iste.
+                    Revature is a leading technology company specializing in software development, software consulting, and software training.
                   </p>
                 </MDBCol>
     

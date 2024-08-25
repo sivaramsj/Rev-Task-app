@@ -54,7 +54,7 @@ const CreateMessageForm = () => {
 
   return (
     <div className="form-container">
-      <h2>Create Message</h2>
+      <h2 className='form-header-title'>Create Message</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div>
           <label>Subject:</label>

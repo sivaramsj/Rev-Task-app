@@ -116,8 +116,8 @@ function AdminHome() {
             <TopNav options={navigateOptions} adminContext={setAdminContext} projectDetails={setProjectDetails} />
             {adminContext === "default" || adminContext === "analysis" ? (
               <div>
-                <Analysis title={taskTitle} data={taskData} pie={false} />
                 <Analysis title={projectTitle} data={projectData} pie={true}/>
+                <Analysis title={taskTitle} data={taskData} pie={false} />
               </div>
 
             ) : adminContext === "messages" ? (
@@ -168,22 +168,29 @@ function AdminHome() {
               {projectDetails === "task" && adminContext > -1 ? (<>
                 <TaskBoard project={adminContext} openModal={openModal}/>
                 </>
-              ) : projectDetails === "details" ? (
+              ) : projectDetails === "details" && adminContext>-1 ? (
                 <>
-                  <ProjectCard project={projects[adminContext]} />
-                  {/* <br />
-                  <br /> */}
-                  <div className='client-display-component-home' style={{width:"50%",margin:"24px auto"}}>
-                    <ClientRow client={projects[adminContext].client} openModal={openModal}/>
+                  <div className='details-header-container'>
+                    <span className='details-header-title'>Project Details:</span>
+                    <div className='client-display-component-home'>
+                      <ProjectCard project={projects[adminContext]}/>
+                    </div>
+                  </div>
+              
+                  <div className='details-header-container'>
+                    <span className='details-header-title'>Client Details:</span>
+                    <div className='client-display-component-home'>
+                      <ClientRow client={projects[adminContext].client} openModal={openModal}/>
+                    </div>
                   </div>
                 </>
-              ) : projectDetails === "team" ? (
+              ) : projectDetails === "team" && adminContext>-1 ? (
                 <>
 
                   {/* <h1>Team selected</h1> */}
                   <AddTeamMember project={projects[adminContext]} />
                 </>
-              ) : projectDetails === "createTask" ? (
+              ) : projectDetails === "createTask" && adminContext>-1 ? (
                 <>
                   <CreateTaskForm project={projects[adminContext]} update={setProjectDetails}/>
                 </>

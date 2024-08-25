@@ -7,7 +7,7 @@
     margin: 0 auto; /* Center the form horizontally */
     padding: 20px; /* Added padding for better spacing */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visibility */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 32px; /* Rounded corners */
     background-color: #fff; /* Background color for better visibility */
 }
 
@@ -143,6 +143,17 @@
 .search-section button:hover {
     background-color: #0056b3;
 }
+
+.form-header-title{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: #5d7285;
+    padding: 1rem;
+    border-radius: 32px;
+    text-align: center;
+}
+
 
 
 

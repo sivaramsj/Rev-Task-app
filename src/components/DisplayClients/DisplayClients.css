@@ -2,6 +2,33 @@
     padding: 1rem 2rem;
 }
 
+.client-search-container {
+    /* display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+#client-search-input {
+    width: 100%;
+    /* max-width: 600px; */
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
 .clients-container {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 .project-display-component{
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; 
 }
 .projects-grid {
     background-color: white;
@@ -10,6 +10,7 @@
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 2rem 1rem;
+    width: 100%;
 }
 
 @media (min-width: 600px) {
@@ -24,16 +25,63 @@
 
 @media (min-width: 882px) {
     .project-display-component{
-        padding: 1rem ;
+        padding: 3rem;
     }
     .projects-grid {
         overflow: auto;
         grid-template-columns: repeat(2, 1fr);
+        width: 90%;
     }
 }
 
 @media (min-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.search-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+#project-search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.filter-button {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #5d7285; 
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button::after {
+    content: '\25BC';
+    font-size: 0.75rem;
+    margin-left: 8px;
+}
+
+.filter-button:focus {
+    outline: none;
+}
+

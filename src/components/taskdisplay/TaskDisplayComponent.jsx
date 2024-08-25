@@ -145,9 +145,12 @@ const TaskDisplayComponent = ({taskid}) => {
                             <p>{new Date(task.endDate).toLocaleDateString()}</p>
                         )}
                     </div>
-                    <div className="edit-button-container">
+                    {userDetail.role==="MANAGER"?(
+                        <div className="edit-button-container">
                         <ResetButton onClick={toggleEdit} value={isEditing ? "Save" : "Edit"} />
                     </div>
+                    ):(<></>)}
+                    
                 </div>
             </div>
 

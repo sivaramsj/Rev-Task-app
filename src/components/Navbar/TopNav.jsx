@@ -13,7 +13,7 @@ export const TopNav = ({options,project,adminContext,projectDetails}) => {
   return (
     <div>
     <nav className="top-nav navbar bg-body-tertiary">
-  <form className="container-fluid justify-content-start">
+  <form className="container-fluid justify-content-start d-flex justify-content-center align-items-center">
     {/* {console.log(options)} */}
     {options=="user"?(
         <>
@@ -41,7 +41,7 @@ export const TopNav = ({options,project,adminContext,projectDetails}) => {
     return (
         <button
             key={index}
-            className="btn btn-outline-warning me-2"
+            className="btn btn-outline-dark mx-2 mb-sm-2 mb-md-2"
             type="button"
             onClick={() =>{ 
               adminContext(index)

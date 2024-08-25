@@ -4,6 +4,8 @@ import { userContext } from '../Context/UserContextComponent';
 import "./LoginPage.css"
 import api from '../../config/api';
 import { json, Link,useNavigate} from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function LoginPage({onLogin}) {
 
     const [email,setEmail] = useState('');
@@ -21,13 +23,11 @@ function LoginPage({onLogin}) {
                     navigate("/home")
                 }
                 else{
-                alert("In valid credentials: "+localStorage.data.status)
+                    toast.error("Invalid Credentials")
                 }
             })
             .catch((err)=>{
-                alert("In valid credentials from error")
-                console.log(err.response.data);
-                
+                toast.error("Invalid Credentials")                
             })
             // console.log(userData);
             
@@ -68,6 +68,7 @@ function LoginPage({onLogin}) {
                     <button type="submit" className="login-button">Log in</button>
                 </form>
             </div>
+            <ToastContainer/>
         </div>
         
     )
